@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "com.unity.render-pipelines.universal": "7.1.8",
+    "net.slothsoft.unity-extensions": "https://github.com/Faulo/UnityExtensions.git#0.1.6",
+    "com.unity.modules.animation": "1.0.0",
+    "com.unity.modules.assetbundle": "1.0.0",
+    "com.unity.modules.audio": "1.0.0",
+    "com.unity.modules.imageconversion": "1.0.0",
+    "com.unity.modules.imgui": "1.0.0",
+    "com.unity.modules.jsonserialize": "1.0.0",
+    "com.unity.modules.particlesystem": "1.0.0",
+    "com.unity.modules.physics": "1.0.0",
+    "com.unity.modules.screencapture": "1.0.0",
+    "com.unity.modules.ui": "1.0.0",
+    "com.unity.modules.uielements": "1.0.0",
+    "com.unity.modules.umbra": "1.0.0",
+    "com.unity.modules.vr": "1.0.0",
+    "com.unity.modules.wind": "1.0.0",
+    "com.unity.modules.xr": "1.0.0"
+  },
+  "lock": {
+    "net.slothsoft.unity-extensions": {
+      "revision": "0.1.6",
+      "hash": "a6857b1efc8d0ef414473fd1bf37ee09d27098e9"
+    }
+  }
+}

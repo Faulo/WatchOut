@@ -1,0 +1,12 @@
+/*
+/*/
+
+!.gitattributes
+!.gitignore
+!.gitmodules
+
+!*.md
+
+!/Assets/
+!/ProjectSettings/
+!/Packages/
