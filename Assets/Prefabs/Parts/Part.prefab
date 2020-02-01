@@ -154,8 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fc8efe2fbc646b4ea8c5991784f014a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  preParts:
-  - {fileID: 0}
+  preParts: []
   blockingParts: []
   dimension: 0
   type: 19
