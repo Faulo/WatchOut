@@ -7,6 +7,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3606997752980506863, guid: a3040393a8003a847ba6d423436f3dae,
+        type: 3}
+      propertyPath: toothCount
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 8162130255120574645, guid: a3040393a8003a847ba6d423436f3dae,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -72,5 +77,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gear_07
       objectReference: {fileID: 0}
+    - target: {fileID: 8929826699532926569, guid: a3040393a8003a847ba6d423436f3dae,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1014821244055024547, guid: f700603478aeb444eb5716f1596ce38c,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3040393a8003a847ba6d423436f3dae, type: 3}

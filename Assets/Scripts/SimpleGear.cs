@@ -7,7 +7,7 @@ public class SimpleGear : MonoBehaviour
 	[SerializeField] private List<SimpleGear> meshedGears = new List<SimpleGear>();
 	[SerializeField] private List<SimpleGear> stackedGears = new List<SimpleGear>();
 	[SerializeField] private float turningSpeed = 1;
-	[SerializeField] private float magicNumber = 6;
+	//[SerializeField] private float magicNumber = 6;
 	[SerializeField] private int toothCount = 20;
 	[SerializeField] private bool powered;
 	[SerializeField] private float offsetForAngle = 0;
@@ -53,7 +53,7 @@ public class SimpleGear : MonoBehaviour
 				float newAngle = Mathf.Abs(((syncRot) % parentToothWidth / parentToothWidth)) * -toothWidth + toothWidth / 2;
 
 				float angleBetweenGears = Vector3.Angle(Vector3.forward, transform.position - parentPos);
-				float offsetFromGearAngle = angleBetweenGears / magicNumber * toothWidth;
+				//float offsetFromGearAngle = angleBetweenGears / magicNumber * toothWidth;
 				//Debug.Log(angleBetweenGears + " | " + transform.eulerAngles.y);
 
 				//Debug.Log("ParentOffset: " + ((syncRot) % parentToothWidth / parentToothWidth) + " | Ratio: " + ((float)toothCount / (float)parentToothCount) + " | SyncRot: " + syncRot);
