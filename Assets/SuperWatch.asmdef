@@ -1,3 +1,15 @@
-﻿{
-	"name": "SuperWatch"
+{
+    "name": "SuperWatch",
+    "references": [
+        "GUID:de6f4013bb41473438f8610efa2bb774"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }
