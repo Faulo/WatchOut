@@ -86,7 +86,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_parentTransform
       value: 
-      objectReference: {fileID: 1913898045079756168}
+      objectReference: {fileID: 1914193583513997258}
     - target: {fileID: 114956354361317420, guid: 6fae51a9f4170334e8639e8dbfc0a54b,
         type: 3}
       propertyPath: m_focusColor.a
@@ -106,6 +106,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_preventGrabThroughWalls
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114956354361317420, guid: 6fae51a9f4170334e8639e8dbfc0a54b,
+        type: 3}
+      propertyPath: m_objectPullVelocity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114956354361317420, guid: 6fae51a9f4170334e8639e8dbfc0a54b,
+        type: 3}
+      propertyPath: m_noSnapThreshhold
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114956354361317420, guid: 6fae51a9f4170334e8639e8dbfc0a54b,
+        type: 3}
+      propertyPath: m_maxGrabDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114956354361317420, guid: 6fae51a9f4170334e8639e8dbfc0a54b,
+        type: 3}
+      propertyPath: grabBegin
+      value: 0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 114956354361317420, guid: 6fae51a9f4170334e8639e8dbfc0a54b,
+        type: 3}
+      propertyPath: grabEnd
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114956354361317420, guid: 6fae51a9f4170334e8639e8dbfc0a54b,
+        type: 3}
+      propertyPath: m_inputScheme
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 137142317624947270, guid: 6fae51a9f4170334e8639e8dbfc0a54b,
         type: 3}
@@ -135,6 +165,12 @@ MonoBehaviour:
 --- !u!95 &2003395902227580864 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 95332594524483946, guid: 6fae51a9f4170334e8639e8dbfc0a54b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1918477951097796266}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1914193583513997258 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4320410954201440, guid: 6fae51a9f4170334e8639e8dbfc0a54b,
     type: 3}
   m_PrefabInstance: {fileID: 1918477951097796266}
   m_PrefabAsset: {fileID: 0}

@@ -11,6 +11,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: DistanceGrabHandLeft
       objectReference: {fileID: 0}
+    - target: {fileID: 4614737286119290, guid: 0242aa8515b4bc947a945a5c6df83ee9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4614737286119290, guid: 0242aa8515b4bc947a945a5c6df83ee9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4614737286119290, guid: 0242aa8515b4bc947a945a5c6df83ee9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4669234126623968, guid: 0242aa8515b4bc947a945a5c6df83ee9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -86,7 +98,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_parentTransform
       value: 
-      objectReference: {fileID: 2240311819617065988}
+      objectReference: {fileID: 2240410031995660792}
     - target: {fileID: 114619746081397232, guid: 0242aa8515b4bc947a945a5c6df83ee9,
         type: 3}
       propertyPath: m_focusColor.g
@@ -111,6 +123,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_preventGrabThroughWalls
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114619746081397232, guid: 0242aa8515b4bc947a945a5c6df83ee9,
+        type: 3}
+      propertyPath: m_inputScheme
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114619746081397232, guid: 0242aa8515b4bc947a945a5c6df83ee9,
+        type: 3}
+      propertyPath: grabBegin
+      value: 0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 114619746081397232, guid: 0242aa8515b4bc947a945a5c6df83ee9,
+        type: 3}
+      propertyPath: grabEnd
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114619746081397232, guid: 0242aa8515b4bc947a945a5c6df83ee9,
+        type: 3}
+      propertyPath: m_noSnapThreshhold
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114619746081397232, guid: 0242aa8515b4bc947a945a5c6df83ee9,
+        type: 3}
+      propertyPath: m_objectPullVelocity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114619746081397232, guid: 0242aa8515b4bc947a945a5c6df83ee9,
+        type: 3}
+      propertyPath: m_maxGrabDistance
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 137261661946083092, guid: 0242aa8515b4bc947a945a5c6df83ee9,
         type: 3}
@@ -140,6 +182,12 @@ MonoBehaviour:
 --- !u!95 &2185157285625087298 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 95848721263463846, guid: 0242aa8515b4bc947a945a5c6df83ee9,
+    type: 3}
+  m_PrefabInstance: {fileID: 2235959279504836836}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2240410031995660792 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4556461938925852, guid: 0242aa8515b4bc947a945a5c6df83ee9,
     type: 3}
   m_PrefabInstance: {fileID: 2235959279504836836}
   m_PrefabAsset: {fileID: 0}

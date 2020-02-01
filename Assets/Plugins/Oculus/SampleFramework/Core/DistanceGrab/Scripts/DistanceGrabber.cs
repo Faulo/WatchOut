@@ -194,7 +194,8 @@ namespace OculusSampleFramework {
                 } else {
                     dir.Normalize();
                     grabbablePosition = m_grabbedObj.transform.position + dir * travel;
-                    grabbableRotation = Quaternion.RotateTowards(m_grabbedObj.transform.rotation, grabbableRotation, m_objectPullMaxRotationRate * Time.deltaTime);
+                    // wir wollen nicht mehr rotieren als nötig
+                    //grabbableRotation = Quaternion.RotateTowards(m_grabbedObj.transform.rotation, grabbableRotation, m_objectPullMaxRotationRate * Time.deltaTime);
                 }
             }
             grabbedRigidbody.MovePosition(grabbablePosition);

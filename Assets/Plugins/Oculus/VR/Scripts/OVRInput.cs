@@ -75,7 +75,7 @@ public static class OVRInput
 		Any                       = ~None,      ///< Maps to RawButton: [Gamepad, Touch, LTouch, RTouch: Any]
 	}
 
-	[Flags]
+    [Flags]
 	/// Raw button mappings that can be used to directly query the state of a controller.
 	public enum RawButton
 	{

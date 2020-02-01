@@ -74,6 +74,9 @@ public class OVRGrabber : MonoBehaviour
 	protected Dictionary<OVRGrabbable, int> m_grabCandidates = new Dictionary<OVRGrabbable, int>();
 	protected bool m_operatingWithoutOVRCameraRig = true;
 
+    [SerializeField]
+    private OVRInput.Axis1D m_inputScheme = OVRInput.Axis1D.PrimaryHandTrigger;
+
     /// <summary>
     /// The currently grabbed object.
     /// </summary>
@@ -172,7 +175,7 @@ public class OVRGrabber : MonoBehaviour
 
 		float prevFlex = m_prevFlex;
 		// Update values from inputs
-		m_prevFlex = OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, m_controller);
+		m_prevFlex = OVRInput.Get(m_inputScheme, m_controller);
 
 		CheckForGrabOrRelease(prevFlex);
     }
