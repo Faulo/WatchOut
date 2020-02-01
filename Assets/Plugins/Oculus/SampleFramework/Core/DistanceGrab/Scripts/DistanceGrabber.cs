@@ -289,7 +289,6 @@ namespace OculusSampleFramework
                     }
                 }
             }
-
             if (dgOut == null && m_useSpherecast)
             {
                 return FindTargetWithSpherecast(out dgOut, out collOut);
