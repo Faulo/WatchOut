@@ -20,7 +20,7 @@ namespace OculusSampleFramework {
         GrabbableCrosshair m_crosshair;
         GrabManager m_crosshairManager;
         [SerializeField]
-        Renderer m_renderer;
+        public MeshFilter meshFilter;
 
         MaterialPropertyBlock m_mpbCurrent;
         MaterialPropertyBlock m_mpbBackup;
@@ -47,49 +47,13 @@ namespace OculusSampleFramework {
         protected override void Start() {
             base.Start();
             m_crosshair = gameObject.GetComponentInChildren<GrabbableCrosshair>();
-            //m_renderer = gameObject.GetComponent<Renderer>();
 
             m_crosshairManager = FindObjectOfType<GrabManager>();
-
-            m_mpbCurrent = new MaterialPropertyBlock();
-            m_mpbCurrent.SetColor(m_materialColorField, Color.red);
-            m_mpbBackup = new MaterialPropertyBlock();
-            m_mpbBackup.SetColor(m_materialColorField, Color.red);
-
-            m_renderer.GetPropertyBlock(m_mpbBackup);
 
             RefreshCrosshair();
         }
 
         void RefreshCrosshair() {
-            return;
-            if (m_crosshair) {
-                if (isGrabbed)
-                    m_crosshair.SetState(GrabbableCrosshair.CrosshairState.Disabled);
-                else if (!InRange)
-                    m_crosshair.SetState(GrabbableCrosshair.CrosshairState.Disabled);
-                else
-                    m_crosshair.SetState(Targeted ? GrabbableCrosshair.CrosshairState.Targeted : GrabbableCrosshair.CrosshairState.Enabled);
-            }
-            if (m_materialColorField != null) {
-                m_renderer.GetPropertyBlock(m_mpbCurrent);
-                if (isGrabbed || !InRange)
-                    m_mpbCurrent.SetColor(m_materialColorField, Color.white);
-                else if (Targeted)
-                    m_mpbCurrent.SetColor(m_materialColorField, m_crosshairManager.OutlineColorHighlighted);
-                else
-                    m_mpbCurrent.SetColor(m_materialColorField, m_crosshairManager.OutlineColorInRange);
-                m_renderer.SetPropertyBlock(m_mpbCurrent);
-            }
-        }
-
-        public void SetColor(Color focusColor) {
-            m_mpbCurrent.SetColor(m_materialColorField, focusColor);
-            m_renderer.SetPropertyBlock(m_mpbCurrent);
-        }
-
-        public void ClearColor() {
-            m_renderer.SetPropertyBlock(m_mpbBackup);
         }
     }
 }

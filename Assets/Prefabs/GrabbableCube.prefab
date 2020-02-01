@@ -161,4 +161,4 @@ MonoBehaviour:
   m_grabPoints:
   - {fileID: 1644798387}
   m_materialColorField: _BaseColor
-  m_renderer: {fileID: 2993715352342365668}
+  meshFilter: {fileID: 2183114168073637698}
