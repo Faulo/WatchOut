@@ -21,6 +21,7 @@ namespace OculusSampleFramework
 
         GrabbableCrosshair m_crosshair;
         GrabManager m_crosshairManager;
+        [SerializeField]
         Renderer m_renderer;
         MaterialPropertyBlock m_mpb;
 
@@ -51,7 +52,7 @@ namespace OculusSampleFramework
         {
             base.Start();
             m_crosshair = gameObject.GetComponentInChildren<GrabbableCrosshair>();
-            m_renderer = gameObject.GetComponent<Renderer>();
+            //m_renderer = gameObject.GetComponent<Renderer>();
             m_crosshairManager = FindObjectOfType<GrabManager>();
             m_mpb = new MaterialPropertyBlock();
             RefreshCrosshair();

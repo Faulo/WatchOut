@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 4413258168682485120}
   - component: {fileID: 2183114168073637698}
   - component: {fileID: 2993715352342365668}
-  - component: {fileID: 2800198946127530332}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80,19 +79,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &2800198946127530332
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1842030918832789990}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2735509280492356355
 GameObject:
   m_ObjectHideFlags: 0
@@ -103,8 +89,9 @@ GameObject:
   m_Component:
   - component: {fileID: 991174672993131940}
   - component: {fileID: 2717784653840640227}
-  - component: {fileID: 3150750701026419196}
-  m_Layer: 0
+  - component: {fileID: 1644798387}
+  - component: {fileID: 1644798384}
+  m_Layer: 8
   m_Name: GrabbableCube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -142,7 +129,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &3150750701026419196
+--- !u!65 &1644798387
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2735509280492356355}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!114 &1644798384
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -151,11 +151,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2735509280492356355}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Script: {fileID: 11500000, guid: 7d1a7708e76601b4ea829921c33bc624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_allowOffhandGrab: 1
   m_snapPosition: 0
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
-  m_grabPoints: []
+  m_grabPoints:
+  - {fileID: 1644798387}
+  m_materialColorField: 
+  m_renderer: {fileID: 2993715352342365668}

@@ -144,6 +144,8 @@ namespace OculusSampleFramework
 
             GrabVolumeEnable(false);
 
+            Debug.Log("closestGrabbable: " + !!closestGrabbable);
+
             if (closestGrabbable != null)
             {
                 if (closestGrabbable.isGrabbed)

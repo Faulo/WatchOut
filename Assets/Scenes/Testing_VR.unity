@@ -197,11 +197,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1516421858518309597, guid: 6074cddcff292ba4f9e9d822418d9f03,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4606534807541360771, guid: 6074cddcff292ba4f9e9d822418d9f03,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -262,75 +257,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: OVRPlayerController
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1516421858511538109, guid: 6074cddcff292ba4f9e9d822418d9f03, type: 3}
-    - {fileID: 5190944751172856100, guid: 6074cddcff292ba4f9e9d822418d9f03, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6074cddcff292ba4f9e9d822418d9f03, type: 3}
---- !u!1 &503910911
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 503910914}
-  - component: {fileID: 503910913}
-  - component: {fileID: 503910912}
-  m_Layer: 0
-  m_Name: GrabManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!135 &503910912
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 503910911}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 10
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &503910913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 503910911}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2d153878a9f7eb45b0e02c0c739029a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OutlineColorInRange: {r: 0, g: 0, b: 0, a: 0}
-  OutlineColorHighlighted: {r: 0, g: 0, b: 0, a: 0}
---- !u!4 &503910914
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 503910911}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1743236787}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &773647642 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 2993715352342365668, guid: 6f1f1ea63dad0fb4db892d65f15fa5b0,
-    type: 3}
-  m_PrefabInstance: {fileID: 8399696304049205318}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &844669250
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -390,146 +318,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67058678066230b4f9c6cfae1e8ad881, type: 3}
---- !u!1 &857403272 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1516421858518073129, guid: 6074cddcff292ba4f9e9d822418d9f03,
-    type: 3}
-  m_PrefabInstance: {fileID: 226326224}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &857403273 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1516421858518309597, guid: 6074cddcff292ba4f9e9d822418d9f03,
-    type: 3}
-  m_PrefabInstance: {fileID: 226326224}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &857403275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 857403272}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b388ff4c8d1f3644a143b16d45403ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  grabBegin: 0.55
-  grabEnd: 0.35
-  m_parentHeldObject: 0
-  m_moveHandPosition: 0
-  m_gripTransform: {fileID: 857403273}
-  m_grabVolumes: []
-  m_controller: 0
-  m_parentTransform: {fileID: 1398444840}
-  m_player: {fileID: 1743236782}
-  m_focusColor: {r: 0, g: 0, b: 0, a: 0}
-  m_spherecastRadius: 0
-  m_noSnapThreshhold: 0.05
-  m_useSpherecast: 0
-  m_preventGrabThroughWalls: 0
-  m_objectPullVelocity: 10
-  m_maxGrabDistance: 0
-  m_grabObjectsInLayer: 0
-  m_obstructionLayer: 0
---- !u!4 &1398444840 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4606534807541300983, guid: 6074cddcff292ba4f9e9d822418d9f03,
-    type: 3}
-  m_PrefabInstance: {fileID: 226326224}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1445737567 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5190944751183720700, guid: 6074cddcff292ba4f9e9d822418d9f03,
-    type: 3}
-  m_PrefabInstance: {fileID: 226326224}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1445737568 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5190944751183952114, guid: 6074cddcff292ba4f9e9d822418d9f03,
-    type: 3}
-  m_PrefabInstance: {fileID: 226326224}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1445737570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1445737567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b388ff4c8d1f3644a143b16d45403ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  grabBegin: 0.55
-  grabEnd: 0.35
-  m_parentHeldObject: 0
-  m_moveHandPosition: 0
-  m_gripTransform: {fileID: 1445737568}
-  m_grabVolumes: []
-  m_controller: 0
-  m_parentTransform: {fileID: 1398444840}
-  m_player: {fileID: 1743236782}
-  m_focusColor: {r: 0, g: 0, b: 0, a: 0}
-  m_spherecastRadius: 0
-  m_noSnapThreshhold: 0.05
-  m_useSpherecast: 0
-  m_preventGrabThroughWalls: 0
-  m_objectPullVelocity: 10
-  m_maxGrabDistance: 0
-  m_grabObjectsInLayer: 0
-  m_obstructionLayer: 0
---- !u!1 &1644798383 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2735509280492356355, guid: 6f1f1ea63dad0fb4db892d65f15fa5b0,
-    type: 3}
-  m_PrefabInstance: {fileID: 8399696304049205318}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1644798384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1644798383}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d1a7708e76601b4ea829921c33bc624, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_allowOffhandGrab: 1
-  m_snapPosition: 0
-  m_snapOrientation: 0
-  m_snapOffset: {fileID: 0}
-  m_grabPoints: []
-  m_materialColorField: 
-  m_renderer: {fileID: 773647642}
---- !u!65 &1644798387
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1644798383}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
---- !u!1 &1743236782 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4606534807541658797, guid: 6074cddcff292ba4f9e9d822418d9f03,
-    type: 3}
-  m_PrefabInstance: {fileID: 226326224}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1743236787 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4606534807541360771, guid: 6074cddcff292ba4f9e9d822418d9f03,
-    type: 3}
-  m_PrefabInstance: {fileID: 226326224}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8399696304049205318
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -597,7 +385,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrabbableCube
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2800198946127530332, guid: 6f1f1ea63dad0fb4db892d65f15fa5b0, type: 3}
-    - {fileID: 3150750701026419196, guid: 6f1f1ea63dad0fb4db892d65f15fa5b0, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f1f1ea63dad0fb4db892d65f15fa5b0, type: 3}
