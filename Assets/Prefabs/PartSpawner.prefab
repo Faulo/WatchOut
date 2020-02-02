@@ -47,4 +47,4 @@ MonoBehaviour:
   - {fileID: 8162130255120574649, guid: a3040393a8003a847ba6d423436f3dae, type: 3}
   minSpawnDistance: -1
   maxSpawnDistance: 1
-  spawnCount: 1
+  spawnCount: 2
