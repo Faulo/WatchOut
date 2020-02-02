@@ -12,16 +12,22 @@ public class SimpleGear : MonoBehaviour
 	[SerializeField] private bool powered;
 	[SerializeField] private float offsetForAngle = 0;
 	[SerializeField] private bool adjustmentMode;
+	[SerializeField] private bool animation;
 	private Vector3 rotationAxis = new Vector3(0, 1, 0);
-
-
+	[SerializeField] private Animator animator;
+	[SerializeField] private float animationSpeedMod = 0.01f;
+	private bool animationPlaying;
+	private bool placed = true;
 	private bool activatedLastFrame = true;
 
 
 	// Start is called before the first frame update
 	void Start()
 	{
-
+		if (animation)
+		{
+			animator.GetComponentInChildren<Animator>();
+		}
 	}
 
 	// Update is called once per frame
@@ -36,13 +42,29 @@ public class SimpleGear : MonoBehaviour
 			activatedLastFrame = true;
 		}
 
-
+		if (animation)
+		{
+			if (animationPlaying)
+			{
+				
+			} else
+			{
+				animator.StopPlayback();
+			}
+		}
 	}
 
 	public void TurnGear(float parentSpeed, int parentToothCount, bool stacked, float syncRot, Vector3 parentPos)
 	{
-		if (gameObject.activeSelf)
+		if (placed)
 		{
+			if (animation)
+			{
+				animationPlaying = true;
+				animator.speed = parentSpeed * animationSpeedMod;
+				animator.Play("PendulumMotion");
+				return;
+			}
 			if (activatedLastFrame && !stacked)
 			{
 				//transform.LookAt(parentPos);
@@ -57,7 +79,7 @@ public class SimpleGear : MonoBehaviour
 				//Debug.Log(angleBetweenGears + " | " + transform.eulerAngles.y);
 
 				//Debug.Log("ParentOffset: " + ((syncRot) % parentToothWidth / parentToothWidth) + " | Ratio: " + ((float)toothCount / (float)parentToothCount) + " | SyncRot: " + syncRot);
-				Debug.Log(newAngle);
+				//Debug.Log(newAngle);
 				
 				gameObject.transform.localRotation = Quaternion.AngleAxis(newAngle + offsetForAngle, rotationAxis);
 			}
@@ -84,6 +106,17 @@ public class SimpleGear : MonoBehaviour
 			gameObject.transform.localRotation = Quaternion.AngleAxis(currentRotation + turningSpeed, rotationAxis);
 
 		}
+	}
+
+	public void ActivateGear ()
+	{
+		placed = true;
+		activatedLastFrame = true;
+	}
+
+	public void DeactivateGear ()
+	{
+		placed = false;
 	}
 
 
