@@ -1450,7 +1450,7 @@ PrefabInstance:
     - target: {fileID: 7537843004492244186, guid: 738ceb06aa21d0a45b1907f5ec61241e,
         type: 3}
       propertyPath: toothCount
-      value: -200
+      value: -100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 738ceb06aa21d0a45b1907f5ec61241e, type: 3}
