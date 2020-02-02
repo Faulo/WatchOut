@@ -43,7 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70f1bed3cba32ed4b82780c085ac02cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabsToSpawn: []
-  minSpawnDistance: -3
-  maxSpawnDistance: 3
-  spawnCount: 2
+  prefabsToSpawn:
+  - {fileID: 8162130255120574649, guid: a3040393a8003a847ba6d423436f3dae, type: 3}
+  minSpawnDistance: -1
+  maxSpawnDistance: 1
+  spawnCount: 1
