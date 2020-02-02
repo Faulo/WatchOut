@@ -32,7 +32,7 @@ public class PartSpawner : MonoBehaviour
         for(int i=0; i<count; i++)
         {
             Part tempPart = Instantiate(part, new Vector3(spawnPos.x + UnityEngine.Random.Range(minSpawnDistance, maxSpawnDistance), spawnPos.y, spawnPos.z + UnityEngine.Random.Range(minSpawnDistance, maxSpawnDistance)), new Quaternion());
-            //tempPart.SetToPhysical();
+            tempPart.SetToPhysical();
         }
     }
 
