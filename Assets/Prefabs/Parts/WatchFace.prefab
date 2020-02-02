@@ -37,6 +37,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 1.96
       objectReference: {fileID: 0}
+    - target: {fileID: 3531575303139828109, guid: a3040393a8003a847ba6d423436f3dae,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f778fb3042c8ee64db6618415cf7f809, type: 2}
     - target: {fileID: 3606997752980506863, guid: a3040393a8003a847ba6d423436f3dae,
         type: 3}
       propertyPath: toothCount
@@ -46,6 +51,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7455285052368338737, guid: a3040393a8003a847ba6d423436f3dae,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8162130255120574645, guid: a3040393a8003a847ba6d423436f3dae,
         type: 3}
