@@ -46,7 +46,12 @@ public class GameManager : MonoBehaviour
 		else if (Input.GetKey(KeyCode.F3))
 		{
 			LoadFinisehdVersion();
-		} else if (currentScene == GameScenes.Splash && (Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0)))
+		}
+		else if (Input.GetKey(KeyCode.F4))
+		{
+			Load2ndFinishedVersion();
+		}
+		else if (currentScene == GameScenes.Splash && (Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0)))
 		{
 			LoadGameScene();
 		}
@@ -65,5 +70,10 @@ public class GameManager : MonoBehaviour
 	public void LoadSplashScreen()
 	{
 		SceneManager.LoadScene(0);
+	}
+
+	public void Load2ndFinishedVersion()
+	{
+		SceneManager.LoadScene(3);
 	}
 }
