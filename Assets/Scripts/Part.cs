@@ -391,4 +391,11 @@ private void OnTriggerExit(Collider other) {
             // TODO: Wait for few seconds, then dissolve...
         }
     }
+
+    public void SetToBlueprint() {
+        dimension = Dimension.BLUEPRINT;
+    }
+    public void SetToPhysical() {
+        dimension = Dimension.PHYSICAL;
+    }
 }
