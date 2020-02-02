@@ -37,6 +37,12 @@ PrefabInstance:
       propertyPath: toothCount
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 7841418019441579781, guid: a3040393a8003a847ba6d423436f3dae,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -5343031964305384342, guid: 2ef245e24405e7441b879e892c4cac7b,
+        type: 3}
     - target: {fileID: 8162130255120574645, guid: a3040393a8003a847ba6d423436f3dae,
         type: 3}
       propertyPath: m_LocalPosition.x

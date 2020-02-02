@@ -7,11 +7,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5699223047089968062, guid: a3040393a8003a847ba6d423436f3dae,
+        type: 3}
+      propertyPath: impactThreshold
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3606997752980506863, guid: a3040393a8003a847ba6d423436f3dae,
         type: 3}
       propertyPath: toothCount
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 7841418019441579781, guid: a3040393a8003a847ba6d423436f3dae,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 401817308007662705, guid: 57871dfeb05b39645be4280782218451,
+        type: 3}
     - target: {fileID: 8162130255120574645, guid: a3040393a8003a847ba6d423436f3dae,
         type: 3}
       propertyPath: m_LocalPosition.x
