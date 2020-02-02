@@ -51,6 +51,9 @@ MonoBehaviour:
   powered: 0
   offsetForAngle: 0
   adjustmentMode: 0
+  animation: 0
+  animator: {fileID: 0}
+  animationSpeedMod: 0.01
 --- !u!1 &7455285052368338737
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,11 +200,21 @@ MonoBehaviour:
   preParts: []
   blockingParts: []
   dimension: 0
+  state: 0
   type: 19
-  posThreshold: 1
-  blueprintRenderer: {fileID: 3531575303139828109}
-  IsAttached: 0
-  IsAttachable: 0
+  maximumSnapDistance: 1
+  meshRenderer: {fileID: 3531575303139828109}
+  grabbable: {fileID: 7191515650515334156}
+  rigidbody: {fileID: 8162130255120574644}
+  collider: {fileID: 7841418019441579781}
+  gearRotation: {fileID: 3606997752980506863}
+  physicalMaterial: {fileID: 2100000, guid: d620e87260424f245873b1d99ce65117, type: 2}
+  placableHologramMaterial: {fileID: 2100000, guid: a6887cfd1749c9544be1a2a302f4d083,
+    type: 2}
+  blockedHologramMaterial: {fileID: 2100000, guid: e13c313811b80ff439a6038c1edfac68,
+    type: 2}
+  isAttached: 0
+  isAttachable: 0
 --- !u!64 &7841418019441579781
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -235,6 +248,7 @@ MonoBehaviour:
   m_grabPoints: []
   m_materialColorField: _BaseColor
   meshFilter: {fileID: 8929826699532926569}
+  Grabbable: 0
 --- !u!114 &-5699223047089968062
 MonoBehaviour:
   m_ObjectHideFlags: 0

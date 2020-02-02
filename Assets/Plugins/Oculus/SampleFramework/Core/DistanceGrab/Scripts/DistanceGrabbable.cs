@@ -25,9 +25,11 @@ namespace OculusSampleFramework {
         MaterialPropertyBlock m_mpbCurrent;
         MaterialPropertyBlock m_mpbBackup;
 
+        public bool Grabbable;
+
 
         public bool InRange {
-            get { return m_inRange; }
+            get { return m_inRange && Grabbable; }
             set {
                 m_inRange = value;
                 RefreshCrosshair();
@@ -36,7 +38,7 @@ namespace OculusSampleFramework {
         bool m_inRange;
 
         public bool Targeted {
-            get { return m_targeted; }
+            get { return m_targeted && Grabbable; }
             set {
                 m_targeted = value;
                 RefreshCrosshair();
