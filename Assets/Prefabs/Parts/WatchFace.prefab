@@ -41,7 +41,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: f778fb3042c8ee64db6618415cf7f809, type: 2}
+      objectReference: {fileID: 2100000, guid: ab9c7f0e9ee991042bf7df52bc1c886c, type: 2}
     - target: {fileID: 3606997752980506863, guid: a3040393a8003a847ba6d423436f3dae,
         type: 3}
       propertyPath: toothCount
