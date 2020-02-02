@@ -25,10 +25,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_B6C2498F: -0.01
+    - Vector1_B6C2498F: -0.03
     m_Colors:
     - Color_A81A8A8D: {r: 0, g: 1, b: 0.9121013, a: 0}
-    - Vector2_D82F6028: {r: 1, g: 1.27, b: 0, a: 0}
+    - Vector2_D82F6028: {r: 1, g: 0.5, b: 0, a: 0}
 --- !u!114 &7212544287313696816
 MonoBehaviour:
   m_ObjectHideFlags: 11
