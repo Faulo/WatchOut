@@ -54,6 +54,7 @@ MonoBehaviour:
   animation: 0
   animator: {fileID: 0}
   animationSpeedMod: 0.01
+  placed: 1
 --- !u!1 &7455285052368338737
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,7 +204,7 @@ MonoBehaviour:
   blockingParts: []
   dimension: 0
   state: 0
-  type: 19
+  type: 26
   maximumSnapDistance: 1
   meshRenderer: {fileID: 3531575303139828109}
   grabbable: {fileID: 7191515650515334156}
@@ -218,6 +219,7 @@ MonoBehaviour:
     type: 2}
   isAttached: 0
   isAttachable: 0
+  isBlocked: 0
 --- !u!64 &7841418019441579781
 MeshCollider:
   m_ObjectHideFlags: 0
