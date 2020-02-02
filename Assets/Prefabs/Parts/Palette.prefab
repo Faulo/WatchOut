@@ -309,6 +309,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Palette
       objectReference: {fileID: 0}
+    - target: {fileID: 8929826699532926569, guid: a3040393a8003a847ba6d423436f3dae,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3040393a8003a847ba6d423436f3dae, type: 3}
 --- !u!4 &4874309473895220711 stripped
