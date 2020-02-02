@@ -154,33 +154,47 @@ public class Part : MonoBehaviour
                 attachedBlueprint = blueprint;
             }
         }
-        else if (IsAttachable && other.attachedRigidbody && dimension.Equals(Dimension.BLUEPRINT) && !Input.GetMouseButton(0))
+        else if (other.attachedRigidbody && dimension.Equals(Dimension.BLUEPRINT) && !Input.GetMouseButton(0))
         {
-            if(other.TryGetComponent(out Part part))
+            if (IsAttachable)
             {
-                if (part.type == type && part.dimension == Dimension.PHYSICAL)
+                if (other.TryGetComponent(out Part part))
                 {
-                    Transform collidedTransform = other.GetComponent<Transform>();
-                    // Test if collided objects meets threshold
-                    float distance = Vector3.Distance(collidedTransform.position, position);
-                    if (distance <= posThreshold*boundingZ)
+                    if (part.type == type && part.dimension == Dimension.PHYSICAL)
                     {
-                        // Set collided object to blueprint position, save reference and disable rigidbody
-                        other.GetComponent<Transform>().SetPositionAndRotation(position, rotation);
-                        other.GetComponent<Rigidbody>().isKinematic = true;
-                        attachedPart = part;
+                        Transform collidedTransform = other.GetComponent<Transform>();
+                        // Test if collided objects meets threshold
+                        float distance = Vector3.Distance(collidedTransform.position, position);
+                        if (distance <= posThreshold * boundingZ)
+                        {
+                            // Set collided object to blueprint position, save reference and disable rigidbody
+                            other.GetComponent<Transform>().SetPositionAndRotation(position, rotation);
+                            other.GetComponent<Rigidbody>().isKinematic = true;
+                            attachedPart = part;
 
-                        // Disable blueprint
-                        blueprintRenderer.enabled = false;
+                            // Disable blueprint
+                            blueprintRenderer.enabled = false;
 
-                        // Set necessary variables
-                        IsAttached = true;
-                        IsAttachable = false;
-                        precision = CalculatePrecision(distance);
-                        Debug.Log("Attached part with " + precision * 100 + " % precision!");
+                            // Set necessary variables
+                            IsAttached = true;
+                            IsAttachable = false;
+                            precision = CalculatePrecision(distance);
+                            Debug.Log("Attached part with " + precision * 100 + " % precision!");
+                        }
                     }
                 }
             }
+            else if(!IsAttached)
+            {
+                if (other.TryGetComponent(out Part part))
+                {
+                    if (part.dimension == Dimension.PHYSICAL)
+                    {
+                        part.WreakHavoc();
+                    }
+                }
+            }
+
         }
     }
 
@@ -190,9 +204,10 @@ public class Part : MonoBehaviour
         {
             if (other.TryGetComponent(out Part part))
             {
-                if (part.attachedBlueprint == this) {
+                if (part.attachedBlueprint == this)
+                {
 
-                    if(!CheckForBlocked())
+                    if (!CheckForBlocked())
                     {
                         // Enable physical object rigidbody and delete part reference
                         other.GetComponent<Rigidbody>().isKinematic = false;
@@ -210,7 +225,13 @@ public class Part : MonoBehaviour
                         other.GetComponent<Rigidbody>().isKinematic = false;
                         part.attachedBlueprint = null;
                         attachedPart = null;
-                        part.wreakHavoc();
+                        // Enable blueprint
+                        blueprintRenderer.enabled = true;
+
+                        // Set necessary variables
+                        IsAttached = false;
+
+                        part.WreakHavoc();
                     }
                 }
             }
@@ -268,9 +289,14 @@ public class Part : MonoBehaviour
         return 1 - (distance / boundingZ);
     }
 
-    private void wreakHavoc()
+    private void WreakHavoc()
     {
-        Debug.Log("Something bad is about to happen...");
-        GetComponent<Rigidbody>().AddForce(new Vector3(0f,1000f,0f));
+        // Debug.Log("Something bad is about to happen...");
+        if (dimension == Dimension.PHYSICAL)
+        {
+            Debug.Log("Snap and Die");
+            GetComponent<Rigidbody>().AddForce(new Vector3(0f, 1000f, 0f));
+            // TODO: Wait for few seconds, then dissolve...
+        }
     }
 }
