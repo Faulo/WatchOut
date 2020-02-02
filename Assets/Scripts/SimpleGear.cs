@@ -17,7 +17,7 @@ public class SimpleGear : MonoBehaviour
 	[SerializeField] private Animator animator;
 	[SerializeField] private float animationSpeedMod = 0.01f;
 	private bool animationPlaying;
-	private bool placed = true;
+	public bool placed = true;
 	private bool activatedLastFrame = true;
 
 
@@ -61,7 +61,7 @@ public class SimpleGear : MonoBehaviour
 			if (animation)
 			{
 				animationPlaying = true;
-				animator.speed = parentSpeed * animationSpeedMod;
+				animator.speed = Mathf.Abs(parentSpeed * animationSpeedMod);
 				animator.Play("PendulumMotion");
 				return;
 			}
