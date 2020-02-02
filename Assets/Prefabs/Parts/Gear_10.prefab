@@ -7,6 +7,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1815069097239374290, guid: a3040393a8003a847ba6d423436f3dae,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1815069097239374290, guid: a3040393a8003a847ba6d423436f3dae,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.15712395
+      objectReference: {fileID: 0}
+    - target: {fileID: 1815069097239374290, guid: a3040393a8003a847ba6d423436f3dae,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1815069097239374290, guid: a3040393a8003a847ba6d423436f3dae,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 18.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 1815069097239374290, guid: a3040393a8003a847ba6d423436f3dae,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9875789
+      objectReference: {fileID: 0}
+    - target: {fileID: 3606997752980506863, guid: a3040393a8003a847ba6d423436f3dae,
+        type: 3}
+      propertyPath: toothCount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7841418019441579781, guid: a3040393a8003a847ba6d423436f3dae,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 3999017770041459640, guid: d73a9348a3b8fe449a3cf2a708f93dad,
+        type: 3}
     - target: {fileID: 8162130255120574645, guid: a3040393a8003a847ba6d423436f3dae,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -72,5 +108,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gear_10
       objectReference: {fileID: 0}
+    - target: {fileID: 8929826699532926569, guid: a3040393a8003a847ba6d423436f3dae,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 3999017770041459640, guid: d73a9348a3b8fe449a3cf2a708f93dad,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3040393a8003a847ba6d423436f3dae, type: 3}
