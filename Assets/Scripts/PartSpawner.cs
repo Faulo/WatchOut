@@ -14,6 +14,9 @@ public class PartSpawner : MonoBehaviour
     [SerializeField]
     private float maxSpawnDistance = default;
 
+    [SerializeField]
+    private int spawnCount = default;
+
     private Vector3 spawnPos;
 
     // Start is called before the first frame update
@@ -23,7 +26,7 @@ public class PartSpawner : MonoBehaviour
         prefabsToSpawn = FindObjectsOfType<Part>();
         foreach(Part each in prefabsToSpawn)
         {
-            Spawn(each, 2);
+            Spawn(each, spawnCount);
         }
     }
 

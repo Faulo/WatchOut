@@ -46,3 +46,4 @@ MonoBehaviour:
   prefabsToSpawn: []
   minSpawnDistance: -3
   maxSpawnDistance: 3
+  spawnCount: 2
