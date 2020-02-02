@@ -49,6 +49,7 @@ public class Part : MonoBehaviour {
     [Header("Debug info")]
     public bool isAttached = false;
     public bool isAttachable = false;
+    public bool isBlocked = false;
 
     // Instance Information
     private float boundingZ;
@@ -137,6 +138,7 @@ public class Part : MonoBehaviour {
         // Check current state of object
         CheckDimension();
         isAttachable = CheckForAttachable();
+        isBlocked = CheckForBlocked();
 
         if (dimension == Dimension.BLUEPRINT) {
             Debug.Log(nearbyParts.Count);
@@ -156,7 +158,10 @@ public class Part : MonoBehaviour {
                 if (!isAttachable && isAttached) {
                     SetState(State.Off);
                 }
-                if (!isAttachable && !isAttached) {
+                if (!isAttachable && !isAttached && !isBlocked) {
+                    SetState(State.Off);
+                }
+                if (!isAttachable && !isAttached && isBlocked) {
                     SetState(State.BlockedHologram);
                 }
                 break;
@@ -260,7 +265,7 @@ public class Part : MonoBehaviour {
     ISet<Part> nearbyParts = new HashSet<Part>();
     void OnTriggerEnter(Collider other) {
         if (other.TryGetComponent(out Part otherPart)) {
-            nearbyParts.Add(otherPart);
+            //nearbyParts.Add(otherPart);
         }
     }
     void OnTriggerExit(Collider other) {
@@ -274,12 +279,11 @@ public class Part : MonoBehaviour {
     // If so and threshold is met, set collided object to blueprint position.
     private void OnTriggerStay(Collider other) {
         if (other.TryGetComponent(out Part otherPart)) {
-            //ProcessPart(otherPart);
+            ProcessPart(otherPart);
         }
     }
 
     void ProcessPart(Part otherPart) {
-        Debug.Log(otherPart.state);
         switch (dimension) {
             case Dimension.PHYSICAL:
                 attachedBlueprint = otherPart;
@@ -287,8 +291,6 @@ public class Part : MonoBehaviour {
             case Dimension.BLUEPRINT:
                 if (otherPart.dimension == Dimension.PHYSICAL) {
                     if (isAttachable) {
-                        if (otherPart.type == type)
-                            Debug.Log(otherPart.state);
                         if (otherPart.type == type && otherPart.state == State.Loose) {
                             // Test if collided objects meets threshold
                             float distance = Vector3.Distance(otherPart.transform.position, transform.position);
