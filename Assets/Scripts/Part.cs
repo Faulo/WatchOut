@@ -34,7 +34,9 @@ public class Part : MonoBehaviour {
     new Rigidbody rigidbody = default;
     bool previousIsKinematic;
     [SerializeField]
-    new Collider collider = default;
+    Collider physicalCollider = default;
+    [SerializeField]
+    Collider blueprintCollider = default;
     [SerializeField]
     SimpleGear gearRotation = default;
     [SerializeField]
@@ -127,7 +129,7 @@ public class Part : MonoBehaviour {
         previousIsKinematic = rigidbody.isKinematic;
         oldDimension = dimension;
         ApplyDimension();
-        boundingZ = collider.bounds.size.z;
+        boundingZ = physicalCollider.bounds.size.z;
     }
 
     // Update is called once per frame
@@ -135,6 +137,11 @@ public class Part : MonoBehaviour {
         // Check current state of object
         CheckDimension();
         isAttachable = CheckForAttachable();
+
+        if (dimension == Dimension.BLUEPRINT) {
+            Debug.Log(nearbyParts.Count);
+        }
+        nearbyParts.ForAll(ProcessPart);
     }
 
     void FixedUpdate() {
@@ -173,12 +180,14 @@ public class Part : MonoBehaviour {
     private void ApplyDimension() {
         switch (dimension) {
             case Dimension.BLUEPRINT:
-                collider.isTrigger = true;
+                physicalCollider.enabled = false;
+                blueprintCollider.enabled = true;
                 grabbable.Grabbable = false;
                 SetState(State.PlacableHologram);
                 break;
             case Dimension.PHYSICAL:
-                collider.isTrigger = false;
+                physicalCollider.enabled = true;
+                blueprintCollider.enabled = false;
                 grabbable.Grabbable = true;
                 SetState(State.Loose);
                 break;
@@ -248,38 +257,56 @@ public class Part : MonoBehaviour {
         }
     }
 
+    ISet<Part> nearbyParts = new HashSet<Part>();
+    void OnTriggerEnter(Collider other) {
+        if (other.TryGetComponent(out Part otherPart)) {
+            nearbyParts.Add(otherPart);
+        }
+    }
+    void OnTriggerExit(Collider other) {
+        if (other.TryGetComponent(out Part otherPart)) {
+            //nearbyParts.Remove(otherPart);
+        }
+    }
     // IF BLUEPRINT:
 
     // Detect if this blueprint is active and the collided object is correct (has same part type as blueprint).
     // If so and threshold is met, set collided object to blueprint position.
     private void OnTriggerStay(Collider other) {
         if (other.TryGetComponent(out Part otherPart)) {
-            switch (dimension) {
-                case Dimension.PHYSICAL:
-                    attachedBlueprint = otherPart;
-                    break;
-                case Dimension.BLUEPRINT:
-                    if (otherPart.dimension == Dimension.PHYSICAL) {
-                        if (isAttachable) {
-                            if (otherPart.type == type && otherPart.state == State.Loose) {
-                                // Test if collided objects meets threshold
-                                float distance = Vector3.Distance(other.transform.position, transform.position);
-                                if (distance <= maximumSnapDistance) { // * boundingZ
-                                    // Set collided object to blueprint position, save reference and disable rigidbody
-                                    otherPart.transform.SetPositionAndRotation(transform.position, transform.rotation);
-                                    otherPart.SetState(State.Placed);
-                                    attachedPart = otherPart;
+            //ProcessPart(otherPart);
+        }
+    }
 
-                                    // Set necessary variables
-                                    isAttached = true;
-                                    isAttachable = false;
-                                    Debug.Log("Attached part with " + distance + " units precision!");
-                                }
+    void ProcessPart(Part otherPart) {
+        Debug.Log(otherPart.state);
+        switch (dimension) {
+            case Dimension.PHYSICAL:
+                attachedBlueprint = otherPart;
+                break;
+            case Dimension.BLUEPRINT:
+                if (otherPart.dimension == Dimension.PHYSICAL) {
+                    if (isAttachable) {
+                        if (otherPart.type == type)
+                            Debug.Log(otherPart.state);
+                        if (otherPart.type == type && otherPart.state == State.Loose) {
+                            // Test if collided objects meets threshold
+                            float distance = Vector3.Distance(otherPart.transform.position, transform.position);
+                            if (distance <= maximumSnapDistance) { // * boundingZ
+                                                                   // Set collided object to blueprint position, save reference and disable rigidbody
+                                otherPart.transform.SetPositionAndRotation(transform.position, transform.rotation);
+                                otherPart.SetState(State.Placed);
+                                attachedPart = otherPart;
+
+                                // Set necessary variables
+                                isAttached = true;
+                                isAttachable = false;
+                                Debug.Log("Attached part with " + distance + " units precision!");
                             }
                         }
                     }
-                    break;
-            }
+                }
+                break;
         }
     }
 

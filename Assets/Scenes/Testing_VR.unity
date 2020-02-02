@@ -298,10 +298,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5661180989022427700, guid: 66f01705a36c34349a2c780aa43c459c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5702949316618205443, guid: 66f01705a36c34349a2c780aa43c459c,
         type: 3}
       propertyPath: m_Name
       value: TestWatch
+      objectReference: {fileID: 0}
+    - target: {fileID: 7806569203110964261, guid: 66f01705a36c34349a2c780aa43c459c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8625293694087209768, guid: 66f01705a36c34349a2c780aa43c459c,
         type: 3}
@@ -410,6 +420,11 @@ PrefabInstance:
     - target: {fileID: 858164781962294710, guid: 67058678066230b4f9c6cfae1e8ad881,
         type: 3}
       propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4990699861546988382, guid: 67058678066230b4f9c6cfae1e8ad881,
+        type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6787607165028717089, guid: 67058678066230b4f9c6cfae1e8ad881,
@@ -541,6 +556,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Table
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993631798332663267, guid: f0468f96f5501484184773a6e6803274,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7413805842529987241, guid: f0468f96f5501484184773a6e6803274,
         type: 3}

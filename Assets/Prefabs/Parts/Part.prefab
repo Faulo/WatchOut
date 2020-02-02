@@ -147,6 +147,8 @@ GameObject:
   - component: {fileID: 7841418019441579781}
   - component: {fileID: 7191515650515334156}
   - component: {fileID: -5699223047089968062}
+  - component: {fileID: 4664362300336236223}
+  - component: {fileID: 1641757496963998590}
   m_Layer: 8
   m_Name: Part
   m_TagString: Untagged
@@ -206,12 +208,13 @@ MonoBehaviour:
   meshRenderer: {fileID: 3531575303139828109}
   grabbable: {fileID: 7191515650515334156}
   rigidbody: {fileID: 8162130255120574644}
-  collider: {fileID: 7841418019441579781}
+  physicalCollider: {fileID: 7841418019441579781}
+  blueprintCollider: {fileID: 4664362300336236223}
   gearRotation: {fileID: 3606997752980506863}
   physicalMaterial: {fileID: 2100000, guid: d620e87260424f245873b1d99ce65117, type: 2}
-  placableHologramMaterial: {fileID: 2100000, guid: a6887cfd1749c9544be1a2a302f4d083,
+  placableHologramMaterial: {fileID: 2100000, guid: 5d97fb40f37bc274f9ba12b201688a63,
     type: 2}
-  blockedHologramMaterial: {fileID: 2100000, guid: e13c313811b80ff439a6038c1edfac68,
+  blockedHologramMaterial: {fileID: 2100000, guid: 41d07e43a0fcd7b428541ea1fad9a78d,
     type: 2}
   isAttached: 0
   isAttachable: 0
@@ -265,3 +268,29 @@ MonoBehaviour:
   impactActions:
   - {fileID: 11400000, guid: 428520f1679b98649bbbe822def5f31b, type: 2}
   - {fileID: 11400000, guid: d35bc5620cbd5d949b59562ed07316cb, type: 2}
+--- !u!65 &4664362300336236223
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8162130255120574654}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.02, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &1641757496963998590
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8162130255120574654}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 0.03, y: 0.01, z: 0.03}
+  m_Center: {x: 0, y: 0, z: 0}
