@@ -18,9 +18,16 @@ public enum PartType {
     GEAR13,
     GEAR14,
     GEAR15,
+    GEAR16,
     BALANCE_WHEEL,
     COIL,
     JEWEL,
     PALETTE,
+    HOUR_HAND,
+    MINUTE_HAND,
+    ROD01,
+    ROD02,
+    WATCH_FACE,
+    WATCH_LID,
     OTHER
 };
