@@ -32,5 +32,6 @@ public class RigidbodySpawner : MonoBehaviour {
         var direction = Random.insideUnitCircle;
         var body = Instantiate(prefab, transform.position + offset * Random.insideUnitSphere, prefab.rotation);
         body.AddForce(force * new Vector3(direction.x, 1, direction.y), ForceMode.Acceleration);
+        body.GetComponent<Part>()?.SetToPhysical();
     }
 }

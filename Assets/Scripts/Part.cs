@@ -61,6 +61,7 @@ public class Part : MonoBehaviour {
     private Vector3 screenPoint;
     private Vector3 offset;
 
+    /*
     void OnMouseDown() {
         if (dimension == Dimension.PHYSICAL) {
             screenPoint = Camera.main.WorldToScreenPoint(transform.position);
@@ -72,17 +73,39 @@ public class Part : MonoBehaviour {
             }
         }
     }
-
     void OnMouseDrag() {
         if (dimension == Dimension.PHYSICAL) {
             Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
             Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
             transform.position = curPosition;
+            Debug.Log(curPosition);
         } else {
             if (attachedPart != null) {
                 Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
                 Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
                 attachedPart.transform.position = curPosition;
+            }
+        }
+    }
+    //*/
+    void CheckMouseStuff() {
+        if (Input.GetMouseButtonDown(0)) {
+            screenPoint = Camera.main.WorldToScreenPoint(transform.position);
+            offset = transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
+        }
+        if (Input.GetMouseButton(0)) {
+            if (dimension == Dimension.PHYSICAL) {
+                var mousePosition = Input.mousePosition;
+                var mouseRay = Camera.main.ScreenPointToRay(mousePosition);
+                if (physicalCollider.bounds.IntersectRay(mouseRay)) {
+                    Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
+                    Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
+                    transform.position = curPosition;
+                    Debug.Log(curPosition);
+
+                    //mousePosition.z = screenPoint.z;
+                    //transform.position = Camera.main.ScreenToWorldPoint(mousePosition) + offset;
+                }
             }
         }
     }
@@ -118,9 +141,11 @@ public class Part : MonoBehaviour {
         isBlocked = CheckForBlocked();
 
         if (dimension == Dimension.BLUEPRINT) {
-            Debug.Log(nearbyParts.Count);
+            //Debug.Log(nearbyParts.Count);
         }
         nearbyParts.ForAll(ProcessPart);
+
+        CheckMouseStuff();
     }
 
     void FixedUpdate() {
