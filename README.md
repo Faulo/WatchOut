@@ -8,8 +8,8 @@ Global Game Jam 2020
 - Theme: "Repair"
 
 ## Credits
-- Carl-Philipp Hellmuth (programming)
-- Daniel Schulz (programming)
 - Katharina Broswik (programming)
 - Eduardo Esqueche (level design, sound design)
+- Carl-Philipp Hellmuth (programming)
 - McKenzie Overby (art)
+- Daniel Schulz (programming)
