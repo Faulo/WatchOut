@@ -5,7 +5,7 @@
     "com.unity.textmeshpro": "2.1.4",
     "com.unity.xr.management": "4.0.1",
     "com.unity.xr.oculus": "1.5.1",
-    "net.slothsoft.unity-extensions": "https://github.com/Faulo/UnityExtensions.git#0.1.6",
+    "net.slothsoft.unity-extensions": "2.6.0",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
@@ -37,5 +37,14 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0"
-  }
+  },
+  "scopedRegistries": [
+    {
+      "name": "OpenUPM",
+      "url": "https://package.openupm.com",
+      "scopes": [
+        "net.slothsoft.unity-extensions"
+      ]
+    }
+  ]
 }
