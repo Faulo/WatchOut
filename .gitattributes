@@ -1,3 +1,28 @@
+# Slothsoft File Guide v1.0.0
+# ============================
+#
+# Changelog
+# =========
+# 
+## [1.0.0] - 2024-11-23
+# - Initial Release.
+
+# Assumming \n is fine for most files
 * text=auto eol=lf
 
+# Visual Studio files use \r\n
 *.cs text eol=crlf
+*.csproj text eol=crlf
+*.sln text eol=crlf
+
+# Unity files use \n
+*.meta text eol=lf
+*.prefab text eol=lf
+
+# Assets use binary
+*.png binary
+*.jpg binary
+*.wav binary
+*.ogg binary
+*.mp3 binary
+*.nn binary
